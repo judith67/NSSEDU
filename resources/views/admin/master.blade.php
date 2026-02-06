@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title -->
+    <title>Admin Portal</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ asset('images/Logo.jpg') }}">
+
+    <!-- Template -->
+    <link rel="stylesheet" href="{{ asset('admin/public/graindashboard/css/graindashboard.css') }}">
+</head>
+
+<body class="has-sidebar has-fixed-sidebar-and-header">
+<!-- Header -->
+<header class="header bg-body">
+    <nav class="navbar flex-nowrap p-0">
+        <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+            <!-- Logo For Mobile View -->
+            <a class="navbar-brand navbar-brand-mobile" href="/">
+                <img class="img-fluid w-100" src="{{ asset('images/Logo.jpg') }}" alt="School-Website">
+            </a>
+            <!-- End Logo For Mobile View -->
+
+            <!-- Logo For Desktop View -->
+            <a class="navbar-brand navbar-brand-desktop" href="/">
+                <img class="side-nav-show-on-closed" src="{{ asset('images/Logo.jpg') }}" alt="School-Website" style="width: auto; height: 33px;">
+                <img class="side-nav-hide-on-closed" src="{{ asset('images/Logo.jpg') }}" alt="School-Website" style="width: auto; height: 33px;">
+            </a>
+            <!-- End Logo For Desktop View -->
+        </div>
+
+        <div class="header-content col px-md-3">
+            <div class="d-flex align-items-center">
+                <!-- Side Nav Toggle -->
+                <a  class="js-side-nav header-invoker d-flex mr-md-2" href="#"
+                    data-close-invoker="#sidebarClose"
+                    data-target="#sidebar"
+                    data-target-wrapper="body">
+                    <i class="gd-align-left"></i>
+                </a>
+                <!-- End Side Nav Toggle -->
+
+               
+                <!-- User Avatar -->
+                <div class="dropdown mx-3 dropdown ml-2">
+                    <a id="profileMenuInvoker" class="header-complex-invoker" href="#" aria-controls="profileMenu" aria-haspopup="true" aria-expanded="false" data-unfold-event="click" data-unfold-target="#profileMenu" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+                        <!--img class="avatar rounded-circle mr-md-2" src="{{ asset('admin/#" alt="John Doe') }}"-->
+                        <span class="mr-md-2 avatar-placeholder">S</span>
+                        <span class="d-none d-md-block">School Admin</span>
+                        
+                    </a>
+
+                    <ul id="profileMenu" class="unfold unfold-user unfold-light unfold-top unfold-centered position-absolute pt-2 pb-1 mt-4 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="profileMenuInvoker" style="animation-duration: 300ms;">
+                        <li class="unfold-item">
+                            <a class="unfold-link d-flex align-items-center text-nowrap" href="#">
+                    <span class="unfold-item-icon mr-3">
+                      <i class="gd-user"></i>
+                    </span>
+                                My Profile
+                            </a>
+                        </li>
+                        <li class="unfold-item unfold-item-has-divider">
+                            <a class="unfold-link d-flex align-items-center text-nowrap" href="#">
+                    <span class="unfold-item-icon mr-3">
+                      <i class="gd-power-off"></i>
+                    </span>
+                                Sign Out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End User Avatar -->
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End Header -->
+
+<main class="main">
+    <!-- Sidebar Nav -->
+    <aside id="sidebar" class="js-custom-scroll side-nav">
+        <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+            <!-- Title -->
+            <li class="sidebar-heading h6">Dashboard</li>
+            <!-- End Title -->
+
+            <!-- Dashboard -->
+            <li class="side-nav-menu-item @yield('toppers-form')">
+                <a class="side-nav-menu-link media align-items-center" href="/admin/toppers-form">
+              <span class="side-nav-menu-icon d-flex mr-3">
+                <i class="gd-dashboard"></i>
+              </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Toppers</span>
+                </a>
+            </li>
+            <!-- End Dashboard -->
+
+            <!-- Documentation -->
+            <li class="side-nav-menu-item @yield('media-upload')">
+                <a class="side-nav-menu-link media align-items-center" href="/admin/media-upload">
+              <span class="side-nav-menu-icon d-flex mr-3">
+                <i class="gd-image"></i>
+              </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Media Upload</span>
+                </a>
+            </li>
+            <!-- End Documentation -->
+
+            <!-- Settings -->
+            <li class="side-nav-menu-item @yield('certificate')">
+                <a class="side-nav-menu-link media align-items-center" href="/admin/certificate">
+              <span class="side-nav-menu-icon d-flex mr-3">
+                <i class="gd-save"></i>
+              </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Transfer Certificate</span>
+                </a>
+            </li>
+            <!-- End Settings -->
+
+            <!-- Static -->
+            <li class="side-nav-menu-item @yield('gallery-upload')">
+                <a class="side-nav-menu-link media align-items-center" href="/admin/gallery-upload">
+              <span class="side-nav-menu-icon d-flex mr-3">
+                <i class="gd-file"></i>
+              </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Gallery Upload</span>
+                </a>
+            </li>
+            <!-- End Static -->
+
+             <!-- Static -->
+             <li class="side-nav-menu-item @yield('all-toppers')">
+                <a class="side-nav-menu-link media align-items-center" href="/admin/toppers">
+              <span class="side-nav-menu-icon d-flex mr-3">
+                <i class="gd-trash"></i>
+              </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Delete Toppers</span>
+                </a>
+            </li>
+            <!-- End Static -->
+
+            <!-- Static -->
+            <li class="side-nav-menu-item @yield('delete-media')">
+                <a class="side-nav-menu-link media align-items-center" href="/admin/medias">
+              <span class="side-nav-menu-icon d-flex mr-3">
+                <i class="gd-trash"></i>
+              </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Delete Medias</span>
+                </a>
+            </li>
+            <!-- End Static -->
+
+            <!-- Static -->
+            <li class="side-nav-menu-item @yield('delete-image')">
+                <a class="side-nav-menu-link media align-items-center" href="/admin/images">
+              <span class="side-nav-menu-icon d-flex mr-3">
+                <i class="gd-trash"></i>
+              </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Delete Gallery</span>
+                </a>
+            </li>
+            <!-- End Static -->
+
+        </ul>
+    </aside>
+    <!-- End Sidebar Nav -->
+
+    @yield('content')
+
+     <!-- Footer -->
+     <footer class="small p-3 px-md-4 mt-auto">
+            <div class="row justify-content-between">
+                
+
+                <div class="col-lg text-center mb-3 mb-lg-0">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="gd-twitter-alt"></i></a></li>
+                        <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="gd-facebook"></i></a></li>
+                        <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="gd-github"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg text-center text-lg-right">
+                    &copy; 2021 Mismo Solutions. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+    </div>
+</main>
+
+
+<script src="{{ asset('admin/public/graindashboard/js/graindashboard.js') }}"></script>
+<script src="{{ asset('admin/public/graindashboard/js/graindashboard.vendor.js') }}"></script>
+
+</body>
+</html>
